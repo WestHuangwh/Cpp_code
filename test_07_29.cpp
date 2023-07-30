@@ -150,12 +150,18 @@ class Date
 {
 public:
 	//¹¹Ôìº¯Êı
-	Date(int year, int month, int day)
+	//Date()
+	//{
+	//	_year = 1;
+	//	_month = 1;
+	//	_day = 1;
+
+	//}
+	Date(int year=1, int month=1, int day=1)
 	{
 		_year = year;
 		_month = month;
 		_day = day;
-
 	}
 
 	void Print()
@@ -171,6 +177,14 @@ private:
 
 int main()
 {
-	Date s1(2022, 7, 30);
+	Date d1(2022, 7, 30);
+	Date d2;
+	Date d3(2022);
+
+
+	d1.Print();
+	d2.Print();
+	d3.Print();
+
 	return 0;
 }
