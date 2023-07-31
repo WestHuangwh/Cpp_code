@@ -157,7 +157,9 @@ public:
 	//	_day = 1;
 
 	//}
-	Date(int year=1, int month=1, int day=1)
+
+	//默认构造函数分为：a.无参构造函数 b.全缺省构造函数 c.我们没写，但是编译器默认生成的构造函数
+	Date(int year=1, int month=1, int day=1)//这是一个默认构造函数，特点是不用参数就可以调用的
 	{
 		_year = year;
 		_month = month;
