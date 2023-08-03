@@ -38,6 +38,18 @@ using namespace std;
 class Date
 {
 public:
+	int GetMonthDay(int year, int month)
+	{
+		static int days[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+		if (month == 2 && (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+		{
+			return 29;
+		}
+		else
+		{
+			return days[month];
+		}
+	}
 	//默认构造函数分为：a.无参构造函数 b.全缺省构造函数 c.我们没写，但是编译器默认生成的构造函数
 	Date(int year = 1, int month = 1, int day = 1)//这是一个默认构造函数，特点是不用参数就可以调用的
 	{
@@ -51,6 +63,23 @@ public:
 		return _year == x2._year
 			&& _month == x2._month
 			&& _day == x2._day;
+	}
+	Date operator+=(int day)
+	{
+		_day += day;
+		while (_day > GetMonthDay(_year, _month))
+		{
+			_day -= GetMonthDay(_year, _month);
+			++_month;
+			if (_month == 13)
+			{
+				_month = 1;
+				_year++;
+
+			}
+		}
+		return *this;
+
 	}
 
 private:
