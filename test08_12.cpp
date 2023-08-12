@@ -13,7 +13,7 @@ public:
 	A(const A&aa)
 	{
 		_a = aa._a;
-		cout << "A(int a = 0)->" << _a << endl;
+		cout << "A(const A&aa)->" << _a << endl;
 	}
 	~A()
 	{
