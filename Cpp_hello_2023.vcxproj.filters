@@ -33,7 +33,16 @@
     <ClCompile Include="test_08_01.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test08_12.cpp">
+    <ClCompile Include="test_09_09.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_08_12.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_09_16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_11_01.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
