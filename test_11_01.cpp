@@ -53,7 +53,7 @@ void Test()
 {
 	B b;
 	b.fun(10);
-	b.A::fun();
+	b.A::fun();//用(基类::同名成员函数) 来显示访问父类的同名成员函数
 }
 
 int main()
